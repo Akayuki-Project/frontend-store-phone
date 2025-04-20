@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { URL_PRODUCT } from "../../utils/Endpoint";
 import {
   FaTag,
   FaChevronLeft,
@@ -19,7 +18,7 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProductList = async () => {
       try {
-        const response = await axios.get(URL_PRODUCT);
+        const response = await axios.get("https://api-store-phone.vercel.app/api/products");
         setProductList(response.data);
       } catch (err) {
         console.error("Gagal mengambil data produk:", err);
