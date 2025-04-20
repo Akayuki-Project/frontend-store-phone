@@ -78,6 +78,10 @@ const Checkout = () => {
     }
   };
 
+  if (!product) {
+    return <div>Loading...</div>; // This will show a loading message until the product is fetched
+  }
+
   const finalPrice = product.price || 0;
 
   return (
@@ -94,7 +98,7 @@ const Checkout = () => {
           >
             <p className="mb-2">
               <strong>Nama Produk: </strong>
-              <span className="font-poppins">{product?.name}</span>
+              <span className="font-poppins">{product.name}</span>
             </p>
             <p className="mb-2">
               <strong>Harga Produk: </strong>
