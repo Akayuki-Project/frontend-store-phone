@@ -24,11 +24,11 @@ const UpdateProduct = () => {
         form.setFieldsValue({
           name: res.data.name,
           price: res.data.price,
+          description: res.data.description,
           kondisi: res.data.kondisi,
           ram: res.data.ram,
           rom: res.data.rom,
           warna: res.data.warna,
-          description: res.data.description,
           stock: res.data.stock,
         });
         // Mengatur thumbnail saat ini
@@ -67,11 +67,11 @@ const UpdateProduct = () => {
     const data = new FormData();
     data.append("name", values.name);
     data.append("price", values.price);
+    data.append("description", values.description);
     data.append('kondisi', values.kondisi);
     data.append('ram', values.ram);
     data.append('rom', values.rom);
     data.append('warna', values.warna);
-    data.append("description", values.description);
     data.append("stock", values.stock);
 
     if (fileList.length > 0 && fileList[0].originFileObj) {
