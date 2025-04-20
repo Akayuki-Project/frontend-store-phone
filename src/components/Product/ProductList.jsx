@@ -18,7 +18,7 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProductList = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/products");
+        const response = await axios.get("https://api-store-phone.vercel.app/api/products");
         setProductList(response.data);
       } catch (err) {
         console.error("Gagal mengambil data produk:", err);
