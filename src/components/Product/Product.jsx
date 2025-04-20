@@ -83,7 +83,7 @@ const Product = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                onClick={() => navigate(`/detail/${product.id}`)}
+                onClick={() => navigate(`/detail/${product._id}`)}
                 className="bg-white rounded-xl shadow-md flex items-center p-4 gap-4 hover:shadow-lg cursor-pointer"
               >
                 <img
