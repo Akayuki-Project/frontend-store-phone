@@ -76,10 +76,11 @@ const ProductList = () => {
         ref={scrollRef}
         className="flex gap-6 overflow-x-auto scroll-smooth px-1 scrollbar-hide cursor-grab active:cursor-grabbing select-none"
       >
-        {(productList || [])
+        {productList
           .slice()
           .reverse()
           .map((product, index) => {
+            const finalPrice = product.price || 0;
             const badge = getBadge(product);
             return (
               <motion.div
@@ -107,7 +108,7 @@ const ProductList = () => {
                 )}
                 <h3 className="font-semibold text-lg mt-3">{product.name}</h3>
                 <p className="text-black font-bold text-md mt-1">
-                  Rp{product.price.toLocaleString("id-ID")}
+                  Rp{finalPrice.toLocaleString("id-ID")}
                 </p>
                 <p className="mt-3 text-indigo-500 text-sm underline">
                   Lihat Selengkapnya
