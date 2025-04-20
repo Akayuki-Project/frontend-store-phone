@@ -65,7 +65,7 @@ const Navbar = () => {
           className="container mx-auto flex items-center justify-between gap-4"
         >
           {/* Kiri: Logo */}
-          <div className="flex items-center gap-2 flex-shrink-0">
+          <div className="flex items-center gap-2 flex-shrink-0 cursor-pointer" onClick={() => Navigate("/")}>
             <h1 className="text-white text-xl font-bold">
               <span className="lowercase font-semibold italic">store</span>
               <span className="bg-gradient-to-r from-blue-500 to-violet-500 text-transparent bg-clip-text ml-1 italic">
