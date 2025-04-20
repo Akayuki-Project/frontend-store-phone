@@ -1,5 +1,5 @@
 import React from "react";
-import AboutPng from "../../assets/about.jpeg";
+import AboutPng from "../../assets/about.png";
 import { motion } from "framer-motion";
 
 const About = () => {
