@@ -80,6 +80,7 @@ const ProductList = () => {
           .slice()
           .reverse()
           .map((product, index) => {
+            console.log("Product:", product); // 🐞 Cek apakah ada _id
             const badge = getBadge(product);
             return (
               <motion.div
