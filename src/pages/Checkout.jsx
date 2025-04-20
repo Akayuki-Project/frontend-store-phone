@@ -35,7 +35,7 @@ const Checkout = () => {
       return;
     }
 
-    const finalPrice = product.price; // Tanpa diskon
+    const finalPrice = product.price || 0;
 
     const data = {
       first_name: values.first_name,
@@ -78,7 +78,7 @@ const Checkout = () => {
     }
   };
 
-  const finalPrice = product ? product.price : 0; // Harga tanpa diskon
+  const finalPrice = product.price || 0;
 
   return (
     <div className="px-4 py-6 mt-20 max-w-6xl mx-auto min-h-screen">
