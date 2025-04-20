@@ -35,7 +35,7 @@ const Checkout = () => {
       return;
     }
 
-    const finalPrice = product.price || 0;
+    const finalPrice = product.price;
 
     const data = {
       first_name: values.first_name,
