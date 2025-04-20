@@ -76,7 +76,7 @@ const ProductList = () => {
         ref={scrollRef}
         className="flex gap-6 overflow-x-auto scroll-smooth px-1 scrollbar-hide cursor-grab active:cursor-grabbing select-none"
       >
-        {productList
+        {(productList || [])
           .slice()
           .reverse()
           .map((product, index) => {
