@@ -84,7 +84,7 @@ const ProductList = () => {
             const badge = getBadge(product);
             return (
               <motion.div
-                key={product._id}
+                key={`${product._id}-${index}`}
                 variants={FadeLeft(index * 0.1)}
                 initial="hidden"
                 animate="visible"
