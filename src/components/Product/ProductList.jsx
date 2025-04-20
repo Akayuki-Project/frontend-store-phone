@@ -83,13 +83,13 @@ const ProductList = () => {
             const badge = getBadge(product);
             return (
               <motion.div
-                key={product.id}
+                key={product._id}
                 variants={FadeLeft(index * 0.1)}
                 initial="hidden"
                 animate="visible"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 1.05 }}
-                onClick={() => navigate(`/detail/${product.id}`)}
+                onClick={() => navigate(`/detail/${product._id}`)}
                 className="min-w-[300px] bg-white p-4 rounded-lg shadow-md items-start cursor-pointer"
               >
                 <img
