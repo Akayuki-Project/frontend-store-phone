@@ -74,7 +74,7 @@ const Product = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start justify-center py-4 md:py-4">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => {
-            const finalPrice = product.price;
+            const finalPrice = product.price || 0;
             const badge = getBadge(product);
 
             return (
