@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
+import { URL_PRODUCT } from "../../utils/Endpoint";
 import {
   FaTag,
   FaChevronLeft,
