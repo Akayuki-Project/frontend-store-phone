@@ -40,7 +40,7 @@ const DetailProduct = () => {
     return <p className="text-center py-20">Memuat detail produk... 🌀</p>;
   }
 
-  const finalPrice = product.price;
+  const finalPrice = product.price || 0;
 
   return (
     <div className="max-w-8xl mx-auto px-6 py-8 mt-16 bg-white rounded-lg shadow-md">
